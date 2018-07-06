@@ -1,0 +1,20 @@
+{
+  "name": "employee-gulp",
+  "version": "1.0.0",
+  "description": "angular `$templateCache` is a tool that stores html file in a javascript service and serves them from javascript file only.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-util": "^3.0.8"
+  }
+}
