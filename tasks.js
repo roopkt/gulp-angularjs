@@ -54,6 +54,7 @@ module.exports = {
             .src(config.index)
             .pipe($.plumber())
             .pipe($.useref({ allowEmpty: true, searchPath: './' }))
+            .pipe($.if('*.js', $.ngAnnotate()))
             .pipe($.if('*.js', $.uglify()))
             .pipe($.if('*.css', minifyCss()))
             .pipe(gulp.dest(config.build));
