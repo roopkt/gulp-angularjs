@@ -7,10 +7,9 @@ gulp.task('inject-lib', tasks.injectLib);
 gulp.task('inject-js', tasks.injectJs);
 gulp.task('inject-css', tasks.injectCss);
 gulp.task('inject-template', tasks.injectTemplate);
-gulp.task('optimize',tasks.optimize);
+gulp.task('optimize', tasks.optimize);
 gulp.task('styles', tasks.styles);
 gulp.task('template-cache', tasks.templateCache);
 
-gulp.task('inject', gulp.series('template-cache', 'styles', 'inject-css', 'inject-js', 'inject-lib', 'inject-template'));
-
+gulp.task('default', gulp.series('template-cache', 'styles', 'inject-css', 'inject-js', 'inject-lib', 'inject-template', 'optimize'));
 

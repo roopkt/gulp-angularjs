@@ -47,6 +47,7 @@ module.exports = {
             .pipe($.inject(gulp.src(templateCache, { read: false }), { name: 'inject:templates' }))
             .pipe(gulp.dest(config.client));
     },
+   
     optimize: function () {
         log('optimizing the javascript, css, html');
 
