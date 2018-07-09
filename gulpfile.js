@@ -1,12 +1,16 @@
 var
     gulp = require('gulp'),
-    config = require('./gulp.conf'),
-    $ = require('gulp-load-plugins')({ lazy: true });
+    tasks = require('./tasks');
 
-var tasks = {
-    hello: function () {
-        $.util.log('hello');
-    }
-}
+gulp.task('clean-code', tasks.cleanCode);
+gulp.task('inject-lib', tasks.injectLib);
+gulp.task('inject-js', tasks.injectJs);
+gulp.task('inject-css', tasks.injectCss);
+gulp.task('inject-template', tasks.injectTemplate);
+gulp.task('optimize',tasks.optimize);
+gulp.task('styles', tasks.styles);
+gulp.task('template-cache', tasks.templateCache);
 
-gulp.task('default', tasks.hello);
+gulp.task('inject', gulp.series('template-cache', 'styles', 'inject-css', 'inject-js', 'inject-lib', 'inject-template'));
+
+

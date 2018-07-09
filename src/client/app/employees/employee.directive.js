@@ -1,6 +1,6 @@
 function employeeDirective() {
     return {
-        templateUrl: "./app/employee.view.html",
+        templateUrl: "app/employees/employee.view.html",
         controller: 'ctrl',
         controllerAs: 'vm',
         scope: {}

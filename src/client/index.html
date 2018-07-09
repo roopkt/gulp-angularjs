@@ -1,0 +1,35 @@
+<html ng-app="app">
+
+<head>
+    <!-- build:css styles/lib.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/.tmp/styles.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+   
+    <!-- build:js js/lib.js -->
+    <!-- inject:lib:js -->
+    <script src="/src/lib/angular/angular.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <div>
+        <employee></employee>
+    </div>
+
+    <!-- build:js js/app.js -->
+    <!-- inject:js -->
+    <script src="/src/client/app/app.module.js"></script>
+    <script src="/src/client/app/employees/employee.controller.js"></script>
+    <script src="/src/client/app/employees/employee.directive.js"></script>
+    <!-- endinject -->
+    <!-- inject:templates:js -->
+    <script src="/.tmp/template.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>
