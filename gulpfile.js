@@ -12,12 +12,5 @@ gulp.task('styles', tasks.styles);
 gulp.task('template-cache', tasks.templateCache);
 gulp.task('test', tasks.startAutoTests);
 gulp.task('auto-test', tasks.startAutoTests);
-// gulp.task('test', function (done) {
-//     var Server = require('karma').Server;
-//     new Server({
-//       configFile: __dirname + '/karma.conf.js',
-//       singleRun: false
-//     }, done).start();
-//   });
 gulp.task('build', gulp.series('template-cache', 'styles', 'inject-css', 'inject-js', 'inject-lib', 'inject-template', 'optimize'));
 
